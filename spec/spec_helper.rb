@@ -116,12 +116,13 @@ Capybara.register_driver :poltergeist do |app|
 end
 
 Capybara.run_server = false
-# Capybara.default_driver = :poltergeist
-# Capybara.javascript_driver = :poltergeist
+Capybara.default_driver = :poltergeist
+Capybara.javascript_driver = :poltergeist
 Capybara.ignore_hidden_elements = false
-Capybara.default_driver = :webkit
-Capybara.javascript_driver = :webkit
-Capybara::Webkit.configure do |config|
-  config.allow_unknown_urls
-  config.allow_url("http://staging.arubaito-ex.jp/premium/api/jobs?page=1")
-end
+
+# Capybara.default_driver = :webkit
+# Capybara.javascript_driver = :webkit
+# Capybara::Webkit.configure do |config|
+#   config.allow_unknown_urls
+#   config.allow_url("http://staging.arubaito-ex.jp/premium/api/jobs?page=1")
+# end
